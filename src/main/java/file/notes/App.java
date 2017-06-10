@@ -8,20 +8,20 @@ import java.io.InputStreamReader;
  * Hello world!
  */
 public class App {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         while (true) {
-            String command = br.readLine();
+            String command = null;
+            try {
+                command = br.readLine();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             System.out.println("Success: " + command);
             if ("q".equals(command)) {
                 System.exit(0);
             }
-
-
         }
-
-
-
     }
 }

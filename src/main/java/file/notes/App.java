@@ -18,9 +18,14 @@ public class App {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            System.out.println("Success: " + command);
             if ("q".equals(command)) {
                 System.exit(0);
+            }
+            else if (("create".equals(command)) || ("delete".equals(command)) || ("show".equals(command))) {
+                System.out.println("Success: " + command);
+            }
+            else {
+                System.out.println("Error. Unsupported command. Press one of commands: creade, delete, show." );
             }
         }
     }

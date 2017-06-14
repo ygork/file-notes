@@ -21,7 +21,7 @@ public class App {
             if ("q".equals(command)) {
                 System.exit(0);
             }
-            else if (("create".equals(command)) || ("delete".equals(command)) || ("show".equals(command))) {
+            else if ("create".equals(command) || "delete".equals(command) || "show".equals(command)) {
                 System.out.println("Success: " + command);
             }
             else {
